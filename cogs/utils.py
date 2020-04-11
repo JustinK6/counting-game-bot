@@ -46,6 +46,7 @@ class Utils(commands.Cog):
     @commands.command()
     async def clear(self, ctx, amount = 1):
         await ctx.channel.purge(limit = amount + 1)
+        print(amount)
 
 def setup(client):
     client.add_cog(Utils(client))
